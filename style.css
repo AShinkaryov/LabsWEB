@@ -1,0 +1,3237 @@
+/* ========================================
+   1. ШРИФТЫ
+   ======================================== */
+@font-face {
+    font-family: 'Venti CF';
+    src: url('fonts/venti-cf-sans-serif-font-family/TTF/VentiCF-Medium.ttf');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Venti CF';
+    src: url('fonts/venti-cf-sans-serif-font-family/TTF/VentiCF-Bold.ttf');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins-Medium.ttf');
+    font-weight: 500;
+}
+
+/* ========================================
+   2. СБРОС И БАЗА
+   ======================================== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    font-family: 'Venti CF', sans-serif;
+    flex-direction: column; 
+    align-items: center;
+    overflow-y: auto; 
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* ========================================
+   3. КАНВАС И КОНТЕЙНЕРЫ
+   ======================================== */
+/* Первый экран */
+.site-canvas {
+    width: 1440px;
+    height: 800px;
+    background-color: #66CDAA40; 
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex-shrink: 0;
+}
+
+/* Контейнер для контента второго экрана */
+.container-inner {
+    width: 1440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        transform: translate(0px, 6px);
+}
+.container-inner1 {
+    width: 1440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+        transform: translate(4px, -50px);
+}
+.container-inner3 {
+    width: 1440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     transform: translate(0px, -22px);
+}
+
+
+
+/* ========================================
+   4. ХЕДЕР
+   ======================================== */
+.header {
+    padding: 56px 140px 0 140px;
+    height: 115px;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo-box {
+    width: 259px;
+    height: 60px;
+    border: 2px solid #000;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    flex-shrink: 0;
+}
+
+.logo-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: lowercase;
+    margin-left: 9px;
+}
+
+.logo-sep {
+    width: 3px;
+    height: 56px;
+    background: #000;
+    margin-left: 13px;
+}
+
+.hanger-img {
+    width: 42px;
+    height: auto;
+    margin-left: 4px;
+    margin-right: -4px;
+}
+
+.nav {
+    display: flex;
+    gap: 50px;
+    margin-left: 41px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #000;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.nav-link:first-child {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+.social {
+    margin-left: auto;
+    margin-right: 1px;
+}
+
+.wa-icon { 
+    width: 36px;
+    height: 36px; 
+    margin-top: 6px; 
+}
+
+/* ========================================
+   5. ГЛАВНЫЙ БЛОК (HERO)
+   ======================================== */
+.main-wrapper {
+    display: flex;
+    padding: 0 140px;
+    padding-top: 204px;
+}
+
+.text-block {
+    width: 630px;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 10;
+}
+
+.title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 27px;
+}
+
+.highlight { color: #FF5E5E; }
+
+.description {
+    font-size: 20px;
+    line-height: 1.3;
+    margin-bottom: 27px;
+    max-width: 570px;
+}
+
+.highlight-bold {
+    color: #FF5E5E;
+    font-weight: 700;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 330px;
+    height: 60px;
+    font-size: 24px;
+    font-family: 'Venti CF', sans-serif;
+    background: #FF5E5E;
+    color: #fff;
+    border: none;
+    border-radius: 500px;
+    cursor: pointer;
+    padding-bottom: 4px;
+    box-shadow: 0 0 15px rgba(255, 94, 94, 0.6), 0 0 30px rgba(255, 94, 94, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    box-shadow: 0 0 20px rgba(255, 94, 94, 0.8), 0 0 40px rgba(255, 94, 94, 0.6);
+    transform: scale(1.02);
+}
+
+.btn-text {
+    display: block;
+    transform: translateY(-10px);
+}
+
+/* ========================================
+   6. ВИЗУАЛЬНАЯ ЧАСТЬ (ФИГУРЫ И ЦЕННИКИ)
+   ======================================== */
+.visual-wrapper {
+    margin-left: auto;
+    margin-top: -385px;
+    display: flex;
+    align-items: flex-start;
+    margin-left: -48px;
+}
+
+.shape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Бежевый блок */
+.shape-beige {
+    width: 460px;
+    height: 725px;
+    background: #FDE3B8;
+    border-radius: 0 0 230px 230px;
+    z-index: 5;
+    justify-content: flex-end;
+    margin-left: -80px;
+    margin-top: 66px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.img-main {
+    width: 249px;
+    height: 614px;
+    display: block;
+    object-fit: cover;
+    transform: translate(-3px, 89px);
+}
+
+/* Розовый блок */
+.shape-pink {
+    width: 232px;
+    height: 425px;
+    background: #FFD6D6;
+    border-radius: 155px;
+    margin-left: 36px;
+    margin-top: 218px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: visible;
+}
+
+.img-side {
+    width: 106%;
+    margin-top: 67px;
+    object-fit: contain;
+    margin-left: 14px;
+}
+
+/* --- Ценники --- */
+.price-tag, .price-tag2 {
+    background: #C6E5F3;
+    padding: 7px 20px;
+    border-radius: 20px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+    position: relative;
+    z-index: 5;
+}
+
+.price-tag-beige {
+    border-radius: 30px 0 0 30px;
+    transform: translate(171px, -215px);
+}
+
+.price-tag-pink {
+    margin-left: -30px;
+    border-radius: 0 31px 31px 0;
+    transform: translate(27px, -167px);
+}
+
+.dot, .dot2 {
+    width: 11px;
+    height: 11px;
+    background: #FF5E5E;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.price {
+    font-family: 'Venti CF', sans-serif;
+    font-size: 18px;
+    color: #666;
+    margin-left: -3%;
+    margin-top: 6px;
+}
+
+
+.dot { transform: translate(-4px, 0px); }
+.dot2 { transform: translate(-1px, 0px); }
+
+.price-text1 {
+    display: inline-block;
+    line-height: 1.2;
+    transform: translate(-7px, 2px);
+}
+
+.price-text2 {
+    display: inline-block;
+    line-height: 1.2;
+    transform: translate(1px, 3px);
+}
+
+/* ========================================
+   7. ВТОРОЙ ЭКРАН (БЕЛЫЙ БЛОК И СЕТКА)
+   ======================================== */
+.white-block {
+    width: 1440px;
+    background-color: #FFFFFF;
+    padding-top: 120px;
+    padding-bottom: 100px;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.features-header {
+    display: flex;
+    align-items: center;
+    width: 1160px;
+
+    margin-bottom: 43px;
+
+    transform: translate(25px, 1px);
+}
+
+.pill-icon {
+    display: block;
+    width: 12px;
+    height: 30px;
+    background-color: #FF5E5E;
+    border-radius: 800px;
+    border: 2px solid #FF5E5E;
+    margin-right: -2px;
+    margin-top: -12px;
+    margin-left: -8px;
+    transform: translate(-18px, 0px);
+}
+.pill-icon1 {
+    display: block;
+    width: 12px;
+    height: 30px;
+    background-color: #FF5E5E;
+    border-radius: 800px;
+    border: 2px solid #FF5E5E;
+    margin-right: -2px;
+    margin-top: -12px;
+    margin-left: -8px;
+ transform: translate(-2px, -2px);
+}
+.pill-icon4 {
+    display: block;
+    width: 12px;
+    height: 30px;
+    background-color: #FF5E5E;
+    border-radius: 800px;
+    border: 2px solid #FF5E5E;
+    margin-right: -2px;
+    margin-top: -12px;
+    margin-left: -8px;
+    transform: translate(-1px, -4px);
+}
+.section-title {
+    font-family: 'Venti CF', sans-serif;
+    font-size: 37px;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+    line-height: 1;
+
+    margin-left: 18px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: 360px 360px 360px; 
+    grid-template-rows: 117px 117px; 
+    gap: 40px;
+    width: 1160px;
+    margin-top: -1px;
+    align-items: center; 
+}
+
+/* ========================================
+   8. КАРТОЧКИ (ОБЩИЕ И СПЕЦИФИЧНЫЕ)
+   ======================================== */
+.feature-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.feature-card p {
+    margin: 0;
+    z-index: 2;
+    font-family: 'Venti CF', sans-serif;
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+.feature-card b { font-weight: 700; }
+
+/* Левая Верхняя (ОТК) */
+.card-otk {
+    background: #FFFFFF;
+    border: 2px solid #000;
+    border-radius: 150px 0 0 0;
+    padding-left: 33px;
+    padding-right: 20px;
+    height: 116px;
+    justify-content: center;
+}
+
+.card-otk p {
+    transform: translate(37px, 2px);
+}
+
+/* Центральная */
+.card-center {
+    grid-row: 1 / span 2;
+    grid-column: 2 / 3;
+    background: rgba(204, 216, 208, 0.5);
+    height: 275px;
+    align-self: center;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-center p { max-width: 280px; }
+
+/* Правая Верхняя */
+.card-assort {
+    background: rgba(204, 216, 208, 0.5);
+    border-radius: 0 150px 0 0;
+    padding-left: 68px;
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    height: 116px;
+}
+
+/* Левая Нижняя (Доставка) */
+.card-delivery {
+    background: linear-gradient(90deg, #CCD8D0 0%, #FED28B 100%);
+    border-radius: 0 0 0 150px;
+    padding-left: 35px;
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    height: 116px;
+}
+
+.card-delivery p {
+    font-size: 16px;
+    text-align: right;
+}
+
+/* Правая Нижняя */
+.card-trend {
+    background: rgba(204, 216, 208, 0.5);
+    border-radius: 0 0 150px 0;
+    padding-left: 68px;
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    height: 116px;
+}
+
+/* Скругления */
+.card-tl-round { border-radius: 150px 0 0 0; }
+.card-tr-round { border-radius: 0 150px 0 0; }
+.card-bl-round { border-radius: 0 0 0 150px; }
+.card-br-round { border-radius: 0 0 150px 0; }
+
+.text-shift {
+    display: block;
+    margin-left: -29px;
+}
+
+/* ========================================
+   9. ИКОНКИ В КРУЖКАХ
+   ======================================== */
+.card-icon {
+    width: 50px;
+    height: 50px;
+    background: #FDE3B8;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+}
+
+/* Позиционирование иконок */
+.card-center .card-icon {
+    margin-bottom: 23px;
+    width: 90px;
+    height: 90px;
+    background-size: 70%;
+    
+    transform: translate(0px, -5px);
+
+}
+
+.card-otk .card-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translate(12px, -26px);
+}
+
+.card-assort .card-icon,
+.card-trend .card-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translate(-21%,-53%);
+}
+
+.card-delivery .card-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+  transform: translate(31%, -41%);
+
+}
+
+/* Красный текст для доставки */
+/* Карточка Доставка */
+.card-delivery {
+    background: linear-gradient(90deg, #CCD8D0 0%, #FED28B 100%);
+    border-radius: 0 0 0 150px;
+    padding-left: 65px;   /* 👈 Увеличил отступ слева (было 35px) */
+    padding-right: 40px;  /* 👈 Увеличил отступ справа (было 30px) */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 116px;
+    position: relative;
+}
+
+.card-delivery p {
+    font-size: 20px;
+    line-height: 1.2;     /* 👈 Чуть больше межстрочный интервал */
+    flex: 1;
+    padding-right: 49px;  /* 👈 Место для иконки справа */
+    padding-top: 3px; 
+    white-space: nowrap;    /* 👈 Отступ сверху */
+}
+
+/* Иконка грузовика */
+.card-delivery .card-icon {
+    position: absolute;
+    right: 25px;          /* 👈 Отступ от правого края */
+    top: 45%;             /* 👈 Чуть выше центра */
+
+}
+.card-assort p {
+    padding-left: 63px; /* 👈 Увеличь отступ → текст правее */
+    /* или для точного сдвига: */
+    transform: translateX(-66px); 
+}
+/* Красный цвет для жирного текста во всех карточках */
+.card-assort b {
+    color: #FF5E5E;
+}
+
+.card-trend b {
+    color: #FF5E5E;
+}
+
+/* Для центральной карточки (если нужно) */
+.card-center b {
+    color: #FF5E5E;
+}
+
+/* Для доставки (если нужно) */
+.card-delivery b {
+    color: #FF5E5E;
+}
+/* Цвета текста */
+.text-red {
+    color: #FF5E5E;
+    font-weight: 500;
+}
+
+.text-red-bold {
+    color: #FF5E5E;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* ========================================
+   СЕКЦИЯ КАТАЛОГ (ТОЧНЫЕ РАЗМЕРЫ)
+   ======================================== */
+.catalog-section {
+    width: 1440px;
+    background-color: #FFFFFF;
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+
+/* Заголовок */
+.catalog-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  transform: translate(-502px, 0px);
+    margin-bottom: 40px;
+}
+
+.catalog-title {
+    font-family: 'Venti CF', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+}
+
+/* ОБЕРТКА КАТАЛОГА (1182px шириной) */
+.catalog-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 1182px;        /* Твоя ширина из Figma */
+    margin: 0 auto;       /* Центрируем */
+    margin-bottom: 40px;
+    gap: 40px;
+}
+/* Бежевый круг (обертка) */
+.stat-icon-circle {
+    width: 50px !important;   /* 👈 Меняй это число */
+    height: 50px !important;  /* 👈 И это (должно быть равно width) */
+    min-width: 50px !important; /* 👈 Добавил, чтобы не сжимался */
+    min-height: 50px !important;
+    background-color: #FCE8D5; /*  Бежевый цвет (как на макете) */
+    border-radius: 50%;       /* Делает квадрат кругом */
+    
+    display: flex;            /* Центрирует картинку внутри круга */
+    justify-content: center;
+    align-items: center;
+    transform: translate(-12px, -25px);
+}
+
+/* Сама картинка */
+.stat-icon-image {
+    width: 33px;        /* Твой размер */
+    height: 33px;       /* Твой размер */
+    object-fit: contain;
+    display: block;
+}
+/* Сетка товаров */
+.products-grid {
+       display: grid;
+    grid-template-columns: repeat(3, 260px);
+    gap: 43px;
+    row-gap: 80px;
+    flex: 1;
+}
+
+/* Карточка товара */
+.product-card {
+    width: 260px;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    
+}
+.product-card1 {
+    width: 260px;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    margin-left: -1%;
+
+}
+.product-card2 {
+    width: 260px;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    margin-left: -2%;
+
+}
+.product-card3 {
+    width: 260px;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+}
+.product-card4 {
+    width: 260px;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+        margin-left: -1%;
+    margin-top: 5%;
+}
+.product-card5 {
+    width: 260px;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+        margin-left: -2%;
+    margin-top: 5%;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+
+/* Изображение (260x360) */
+.product-image {
+        width: 260px;
+    height: 360px;
+    position: relative;
+    background: #F5F5F5;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-left: 3%;
+    margin-top: -1%;
+}
+
+.product-image2 {
+        width: 260px;
+    height: 360px;
+    position: relative;
+    background: #F5F5F5;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-left: 3%;
+    margin-top: -6%;
+    object-position: top center;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-top: -1%;
+    object-position: top center
+}
+/* Исправление для 6-й карточки */
+.product-image2 img {
+    width: 100% !important;      /* Растянуть на всю ширину блока */
+    height: 100% !important;     /* Растянуть на всю высоту блока */
+    object-fit: cover !important; /* Обрезать лишнее, сохраняя пропорции */
+    object-position: 50% 0% !important; /* ПОКАЗАТЬ ВЕРХ (0%) */
+}
+/* Цветные точки */
+.color-dots {
+    position: absolute;
+    top: 13px;
+    right: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+        transform: translate(5px, -4px);
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    transform: translate(-9px, 5px);
+}
+
+/* Контент карточки */
+.product-content {
+    padding: 12px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.product-content2 {
+    padding: 12px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.product-name {
+        font-family: 'Venti CF', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+    margin-left: 7%;
+    margin-top: 1%;
+}
+
+.product-name2 {
+        font-family: 'Venti CF', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+    margin-left: 6%;
+    margin-top: 1%;
+}
+
+.product-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 5px;
+}
+
+.price {
+    font-family: 'Venti CF', sans-serif;
+    font-size: 18px;
+    color: #666;
+    transform: translate(-1px, -3px);}
+
+.btn-buy {
+    background: #FF5E5E;
+    color: #FFFFFF;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-family: 'Venti CF', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+        transform: scaleX(1.4) scaleY(1.2);
+}
+
+.btn-buy:hover {
+    background: #FF4040;
+    transform: scale(1.05);
+}
+
+/* ========================================
+   СТАТИСТИКА (СПРАВА)
+   ======================================== */
+.catalog-stats {
+    width: 222px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex-shrink: 0;
+}
+
+.stat-item {
+    width: 222px;
+    height: 187px;
+    background: #FFFFFF;
+    border-radius: 24px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.stat-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.stat-icon {
+    width: 50px;
+    height: 50px;
+    background: #FDE3B8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+    margin-top: -13%;
+    margin-left: -7%;
+}
+
+.stat-label {
+    font-family: 'Venti CF', sans-serif;
+    font-size: 20px;
+    color: #000;
+    margin: 0;
+    line-height: 1.2;
+        transform: translate(-32%, 94%);
+     white-space: nowrap;
+}
+
+.info-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 17px;       /* 👈 Твоя ширина */
+    height: 17px;      /* 👈 Твоя высота */
+    
+    background-color: #C4C4C4; /* Серый цвет */
+    color: #FFFFFF;            /* Белая буква */
+    
+    font-family: sans-serif;
+    font-size: 11px;           /* Размер буквы */
+    font-style: italic;        /* Курсив */
+    font-weight: 400;
+    
+    border-radius: 50%;
+    margin-left: 6px;          /* Отступ от текста "зарабатывают" */
+    line-height: 0;            /* Для точного центрирования по вертикали */
+    padding-bottom: 1px;  
+        transform: translate(-22%, -16%);     /* Небольшая коррекция, чтобы буква стояла ровно по центру */
+}
+
+.stat-value {
+    font-family: 'Venti CF', sans-serif;
+    font-size: 58px;
+    font-weight: 500;
+    color: #000;
+    margin: 5px 0;
+    transform: translate(-6%, 32%);
+}
+
+.stat-subtitle {
+    font-family: 'Venti CF', sans-serif;
+    font-size: 18px;
+    color: #85BE6E;
+    margin: 0;
+    transform: translate(4%, 65%);
+}
+/* Стрелка */
+.stat-subtitle .arrow {
+    color: #85BE6E;
+    font-size: 14px;
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+/* Зелёное слово */
+.stat-subtitle .text-green {
+    color: #85BE6E;
+}
+
+/* Чёрное слово */
+.stat-subtitle .text-black {
+    color: #000000;
+}
+/* Кнопка Смотреть еще */
+.catalog-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 40px;
+    cursor: pointer;
+    width: 1182px;
+    /* margin-left: 140px; */
+    transform: translate(-44px, -47px);
+}
+.more-icon {
+    font-size: 57px;
+    color: #000;
+    font-weight: 130;
+        transform: translate(-125px, 2px);
+}
+
+.more-text {
+    font-family: 'Venti CF', sans-serif;
+    font-size: 24px;
+    color: #000;
+    text-decoration: underline;
+    transform: translate(-129px, -3px);
+}
+/* Только для каталога */
+.catalog-section .container-inner {
+    align-items: flex-start; /* Вместо center */
+}
+
+/* ТОЛЬКО ДЛЯ ЭТОЙ КАРТИНКИ */
+.fix-pos img {
+    object-position: center -10%; /* 👈 Меняй число: 0% = верх, 50% = центр, 100% = низ */
+}
+
+/* ========================================
+   БЛОК CTA (ЗАЯВКА)
+   ======================================== */
+.cta-section {
+    width: 1440px;
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background: #FFFFFF;
+    transform: translate(3px, -191px);
+}
+
+.cta-box {
+    width: 1160px;
+    height: 262px;
+    background-color: #FCE8D5;
+    /* border-radius: 20px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    overflow: hidden;
+    box-sizing: border-box;
+    /* border-radius: 0 304px 0 514px; */
+    border-top-left-radius: 4px;
+    border-top-right-radius: 156px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 145px;
+}
+
+/* Левая часть */
+.cta-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 2;
+    transform: translate(49px, -5px);
+    overflow: visible;
+}
+
+.cta-title {
+    font-family: 'Venti CF', demi-bold;
+    font-size: 35px;
+    font-weight: 600;
+    color: #000;
+    line-height: 1.3;
+    margin: 0;
+    max-width: 450px;
+}
+
+.cta-row {
+    display: flex;
+    gap: 12px;
+    transform: translate(1px, 18px);
+}
+
+/* Поле ввода (300×45) */
+/* Поле ввода */
+.cta-input {
+    width: 300px;
+    height: 45px;
+    border: none;
+    border-radius: 25px;
+    font-family: 'Venti CF', sans-serif;
+    font-size: 16px;
+    color: #333;
+    padding-left: 29px;
+    padding-right: 25px;
+    padding-top: 6px;
+    background: #FFFFFF;
+    outline: none;
+}
+
+/* Цвет плейсхолдера (серого текста "Введите ваш телефон") */
+.cta-input::placeholder {
+    color: #999;           /* Можно сделать светлее или темнее */
+    font-size: 18px;       /* Размер плейсхолдера (должен совпадать с основным) */
+}
+
+/* Кнопка (200×45) */
+.cta-btn {
+    width: 200px;
+    height: 45px;
+    background: #FF5E5E;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 19px;
+    font-family: 'Venti CF', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    padding-left: 0px;
+    padding-top: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    transform: translate(18px, 0px);
+}
+
+.cta-btn:hover {
+    background: #FF4040;
+    transform: scale(1.02);
+}
+
+/* Правая часть */
+/* Правая часть (500px шириной) */
+.cta-right {
+    width: 500px;       /* Твоя ширина */
+    height: 262px;      /* Твоя высота */
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-right: -20px;
+    margin-left: auto;  /* Прижимаем вправо */
+    overflow: visible;    /* Чтобы форма не вылезала за границы блока */
+}
+
+/* Желтая форма (асимметричная арка) */
+.cta-bg-shape {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: #FED28B;
+    border-top-left-radius: 300px;
+    border-top-right-radius: 150px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    z-index: 1;
+    transform: translate(30px, 0px);
+}
+
+/* Картинка модели */
+.cta-img {
+    position: relative;
+    z-index: 2;
+    height: 296px;
+    width: auto;
+    object-fit: contain;
+    /* transform: translateY(15px); */
+    transform: translate(49px, 18px);
+}
+
+/* ========================================
+   СЕКЦИЯ О НАС
+   ======================================== */
+.about-section {
+    width: 1440px;
+    background-color: #FFFFFF;
+
+    padding-bottom: 100px;
+    transform: translate(3px, -190px);
+}
+
+/* Заголовок (как в каталоге) */
+.about-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    /* padding-left: 140px; */
+    transform: translate(-516%, 154%);
+    margin-bottom: 30px;
+}
+
+.about-title {
+    font-family: 'Venti CF', sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+    transform: translate(3%, -10%);
+}
+
+/* Обертка контента */
+.about-wrapper {
+    display: flex;
+    gap: 40px;             /* Расстояние между фото и текстом */
+    padding-left: 119px;   /* Твой отступ слева для картинки */
+    padding-right: 140px;  /* Отступ справа */
+    align-items: flex-start;
+}
+
+/* Картинка (481x520) */
+.about-image {
+    width: 437px;
+    height: 511px;
+    border-radius: 19px;
+    background-color: #E8ECE8;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-1px, 23px);
+}
+
+.about-image img {
+    width: 108%;
+    height: 87%;
+    object-fit: cover;
+    transform: translate(-1px, 33px);
+}
+/* Текст (660x267 примерно) */
+.about-text {
+    width: 660px;
+    /* margin-top: 20px; */
+    transform: translate(19px, 180px);
+}
+.about-text p {
+    font-family: 'Venti CF', sans-serif;
+    font-size: 24px;       /* Твой размер шрифта */
+    font-weight: 500;      /* Medium */
+    line-height: 1.2;      /* Чуть больше 100% для читаемости, или поставь 1 */
+    color: #000;
+    margin: 0;
+}
+
+/* ========================================
+   Для кого
+   ======================================== */
+.for-whom-section {
+    width: 1440px;
+    background-color: #FFFFFF;
+    padding-top: 60px;
+    padding-bottom: 100px;
+    transform: translate(0px, -190px);
+}
+
+.for-whom-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    /* padding-left: 140px; */
+    margin-bottom: 40px;
+        transform: translate(-497px, 1px);
+}
+
+.for-whom-title {
+    font-family: 'Venti CF', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+}
+
+.pill-icon2 {
+    display: block;
+    width: 12px;
+    height: 30px;
+    background-color: #FF5E5E;
+    border-radius: 800px;
+    margin-top: -6%;
+}
+
+/* Сетка */
+.for-whom-grid {
+    display: flex;
+    gap: 40px;
+    padding: 0 140px;
+    justify-content: space-between;
+        transform: translate(0px, 10px);
+}
+
+/* Оболочка карточки (для всех одинаковая) */
+.for-whom-card {
+    width: 360px;
+    height: 460px;
+    border-radius: 20px;
+    padding: 20px 30px; /* Отступы внутри карточки */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Цвета фона (независимые) */
+.card-purple { background-color: #C494D6; }
+.card-yellow { background-color: #FDCB6E; }
+.card-pink   { background-color: #FF7675; }
+
+/* Заголовки (общий стиль) */
+.card-title {
+    font-family: 'Venti CF', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin: 0 0 20px 0;
+    line-height: 1.3;
+    transform: translate(4%, 11%);
+}
+.card-title1 {
+    font-family: 'Venti CF', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin: 0 0 20px 0;
+    line-height: 1.3;
+    transform: translate(4%, 28%);
+}
+.card-title2 {
+    font-family: 'Venti CF', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #1A1A1A;
+    margin: 0 0 20px 0;
+    line-height: 1.25;
+    transform: translate(6%, 11%);
+}
+
+/* ========================================
+   НЕЗАВИСИМЫЕ СПИСКИ (САМОЕ ГЛАВНОЕ)
+   ======================================== */
+
+/* --- 1. ФИОЛЕТОВЫЙ СПИСОК (С ТОЧКАМИ) --- */
+.list-purple {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    transform: translate(9px, 14px);
+}
+
+.list-purple li {
+    font-family: 'Venti CF', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: #1A1A1A;
+    margin-bottom: 3px;
+    position: relative;
+    padding-left: 18px;
+}
+
+.list-purple li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+.list-purple li:last-child {
+    white-space: nowrap; /* Запрещает перенос строки */
+}
+
+/* --- 2. ЖЕЛТЫЙ СПИСОК (С ТОЧКАМИ) --- */
+.list-yellow {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    transform: translate(16px, 39px);
+}
+
+.list-yellow li {
+    font-family: 'Venti CF', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: #1A1A1A;
+    margin-bottom: 2px;
+    position: relative;
+    padding-left: 15px;
+}
+
+
+.card-yellow {
+    padding: 25px 30px; /* Было 40px → даём больше места тексту */
+}
+
+/* Рисуем точку */
+.list-yellow li::before {
+    content: "•";          /* Сама точка */
+    position: absolute;
+    left: 0;
+    font-size: 24px;       /* Размер точки */
+    line-height: 1.2;
+    color: #1A1A1A;        /* Цвет точки */
+}
+
+
+/* --- 3. РОЗОВЫЙ СПИСОК (С ТОЧКАМИ) --- */
+.list-pink {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    transform: translate(15px, 12px);
+}
+.list-pink li {
+    font-family: 'Venti CF', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.35;
+    color: #1A1A1A;
+    margin-bottom: 0px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.list-pink li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    font-size: 24px;
+    line-height: 1.2;
+}
+
+/* Разрешаем перенос в розовой карточке */
+.list-pink li {
+    white-space: normal !important;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Уменьшаем шрифт, чтобы текст влезал */
+.list-pink li:first-child {
+    font-size: 20px;
+    line-height: 1.36;
+}
+
+/* ========================================
+   ОБЩИЕ СТИЛИ ЗАГОЛОВКОВ
+   ======================================== */
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-left: 140px;
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-family: 'Venti CF', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+}
+
+.pill-icon {
+    display: block;
+    width: 12px;
+    height: 30px;
+    background-color: #FF5E5E;
+    border-radius: 800px;
+}
+
+/* ========================================
+   ОБЩИЕ СТИЛИ ЗАГОЛОВКОВ
+   ======================================== */
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-left: 140px;
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-family: 'Venti CF', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+}
+
+.pill-icon {
+    display: block;
+    width: 12px;
+    height: 30px;
+    background-color: #FF5E5E;
+    border-radius: 800px;
+}
+
+/* ========================================
+   ОБЩИЕ СТИЛИ СЕКЦИЙ
+   ======================================== */
+.placeholder-section {
+    width: 1440px;
+    background-color: #FFFFFF;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+/* ================= ОБЩИЕ СТИЛИ ЗАГОЛОВКОВ ================ */
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transform: translate(9px, -76px);
+    margin-bottom: 30px;
+}
+.section-header1 {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transform: translate(148px, -89px);
+    margin-bottom: 30px;
+}
+.section-header2 {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+        transform: translate(148px, -72px);
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-family: 'Venti CF', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+}
+
+.pill-icon5 {
+    display: block;
+    width: 12px;
+    height: 30px;
+    background-color: #FF5E5E;
+    border-radius: 800px;
+    border: 2px solid #FF5E5E;
+    /* margin-right: -2px; */
+    /* margin-top: -12px; */
+    margin-left: -8px;
+    transform: translate(-1px, -6px);
+}
+
+/* ================= СЕКЦИЯ 1: ВОПРОС-ОТВЕТ ================= */
+.faq-photo-section {
+    width: 1440px;
+    background: #FFFFFF;
+    padding-top: 80px;
+    padding-bottom: 80px;
+        transform: translate(0px, -191px);
+}
+
+.faq-frame {
+    width: 1180px;      /* Твоя ширина */
+    height: 678px;      /* Твоя высота */
+    margin-left: 140px; /* left: 140px из Figma */
+    border: none;
+    border-radius: 10px;
+    
+    overflow: hidden;
+    transform: translate(-1px, -87px);
+}
+
+/* Когда вставишь реальное фото, раскомментируй <img> в HTML и оставь этот стиль */
+.faq-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* ================= СЕКЦИИ 2 и 3: ПРОСТЫЕ ================ */
+.simple-section {
+    width: 1440px;
+    background: #FFFFFF;
+    transform: translate(0px, -191px);
+    padding-bottom: 60px;
+}
+
+/* Картинки внутри иконок */
+.card-otk .card-icon { background-image: url('clipboard.png'); }
+.card-center .card-icon { background-image: url('percent.png'); }
+.card-assort .card-icon { background-image: url('house.png'); }
+.card-delivery .card-icon { background-image: url('truck.png'); }
+.card-trend .card-icon { background-image: url('chart.png'); }
+/* ========================================
+   БУРГЕР И МОБИЛЬНОЕ МЕНЮ
+   ======================================== */
+.burger-btn {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+    margin-left: auto;
+}
+.burger-btn span {
+    display: block;
+    width: 28px;
+    height: 2px;
+    background: #000;
+    border-radius: 2px;
+}
+
+.mobile-nav {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: #fff;
+    z-index: 9999;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+}
+.mobile-nav.open { display: flex; }
+
+.mobile-nav-link {
+    font-family: 'Venti CF', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+}
+.mobile-nav-link:hover { color: #FF5E5E; }
+
+.mobile-nav-close {
+    position: absolute;
+    top: 24px; right: 28px;
+    font-size: 34px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #000;
+    font-family: sans-serif;
+}
+
+/* ========================================
+   ПЛАНШЕТ (до 1440px)
+   ======================================== */
+@media (max-width: 1440px) {
+    .site-canvas,
+    .white-block,
+    .catalog-section,
+    .cta-section,
+    .about-section,
+    .for-whom-section,
+    .faq-photo-section,
+    .simple-section {
+        width: 100%;
+    }
+    .container-inner,
+    .container-inner1,
+    .container-inner3 {
+        width: 100%;
+    }
+}
+/* ========================================
+   СКРЫВАЕМ РОЗОВЫЙ БЛОК (1100px - 1400px)
+   ======================================== */
+@media (min-width: 1100px) and (max-width: 1400px) {
+    .shape-pink, 
+    .img-side, 
+    .price-tag-pink {
+        display: none !important;
+    }
+}
+/* ========================================
+   БУРГЕР МЕНЮ: СТРОГО ОТ 1100px ДО 1170px
+   ======================================== */
+@media (min-width: 1100px) and (max-width: 1170px) {
+    .burger-btn {
+        display: flex !important; /* Показываем иконку бургера */
+    }
+    .nav {
+        display: none !important; /* Скрываем десктопные ссылки */
+    }
+    .social {
+        display: none !important; /* Скрываем WhatsApp/соцсети если есть в хедере */
+    }
+}
+/* ========================================
+   ИСПРАВЛЕНИЕ ПОЗИЦИИ БУРГЕРА (В ПРАВЫЙ УГОЛ)
+   ======================================== */
+@media (max-width: 1170px) {
+    .header {
+        justify-content: space-between !important; /* Логотип слева, бургер справа */
+        padding: 20px 24px !important; /* Уменьшаем отступы, чтобы бургер был ближе к краю */
+        align-items: center !important;
+    }
+
+    /* Сам бургер: убираем лишние отступы */
+    .burger-btn {
+        margin-right: 0 !important;
+        margin-left: auto !important; /* Толкаем вправо */
+    }
+}
+/* На экранах шире 1170px принудительно возвращаем обычное меню */
+@media (min-width: 1171px) {
+    
+    .burger-btn {
+        display: none !important;
+    }
+    .nav {
+        display: flex !important; /* Или block, если у тебя так задано в основном CSS */
+    }
+}
+
+
+/* ========================================
+   ПЛАНШЕТ (до 1100px)
+   ======================================== */
+@media (max-width: 1100px) {
+    /* Хедер */
+    .header {
+        padding: 20px 32px 0 32px;
+        height: auto;
+        padding-bottom: 16px;
+        flex-wrap: wrap;
+    }
+    .nav { display: none; }
+    .social { display: none; }
+    .burger-btn { display: flex; }
+
+    /* Hero */
+    .site-canvas {
+        height: auto;
+        overflow: visible;
+    }
+    .main-wrapper {
+        padding: 40px 32px 0 32px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .text-block {
+        width: 100%;
+        text-align: center;
+    }
+    .title { font-size: 32px; }
+    .description { font-size: 17px; max-width: 100%; }
+    .btn { width: auto; padding: 0 32px; font-size: 20px; }
+
+    .visual-wrapper {
+        margin-top: 40px;
+        margin-left: 0;
+        justify-content: center;
+        width: 100%;
+    }
+    .shape-beige {
+        width: 320px;
+        height: 520px;
+        margin-left: 0;
+        margin-top: 0;
+    }
+    .img-main {
+        width: 190px;
+        height: 460px;
+    }
+    .shape-pink {
+        width: 170px;
+        height: 310px;
+        margin-top: 160px;
+        margin-left: 20px;
+    }
+    .price-tag-beige { transform: translate(110px, -170px); }
+    .price-tag-pink  { transform: translate(20px, -130px); }
+
+    /* Второй экран */
+    .white-block { padding: 60px 32px; }
+    .container-inner { width: 100%; transform: none; }
+    .features-header { width: 100%; transform: none; }
+    .features-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        width: 100%;
+        gap: 20px;
+    }
+    .card-center {
+        grid-row: auto;
+        grid-column: auto;
+        height: auto;
+        min-height: 180px;
+    }
+    .card-otk, .card-assort, .card-delivery, .card-trend { height: auto; min-height: 100px; }
+    .card-delivery p { white-space: normal; }
+
+    /* Каталог */
+    .catalog-section { padding: 40px 32px; }
+    .container-inner1 { width: 100%; transform: none; }
+    .catalog-header { transform: none; }
+    .catalog-wrapper { width: 100%; flex-direction: column; }
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        row-gap: 40px;
+    }
+    .product-card, .product-card1, .product-card2,
+    .product-card3, .product-card4, .product-card5 {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 0;
+    }
+    .product-image, .product-image2 { width: 100%; }
+    .catalog-stats { width: 100%; }
+    .stat-item { width: 100%; }
+    .catalog-more { width: 100%; transform: none; }
+    .more-icon { transform: none; }
+    .more-text { transform: none; }
+
+    /* CTA */
+    .cta-section { transform: none; padding: 40px 32px; }
+    .cta-box {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        padding: 40px 32px;
+        border-radius: 20px;
+        gap: 24px;
+    }
+    .cta-left { transform: none; }
+    .cta-title { font-size: 26px; max-width: 100%; }
+    .cta-row { transform: none; flex-wrap: wrap; }
+    .cta-input { width: 100%; }
+    .cta-btn { transform: none; width: 100%; }
+    .cta-right { display: none; }
+
+    /* О нас */
+    .about-section { transform: none; padding: 40px 32px 60px; }
+    .about-header { transform: none; }
+    .about-wrapper {
+        flex-direction: column;
+        padding-left: 0;
+        padding-right: 0;
+        gap: 24px;
+    }
+    .about-image { width: 100%; height: 340px; }
+    .about-image img { width: 100%; height: 100%; transform: none; }
+    .about-text { width: 100%; transform: none; }
+    .about-text p { font-size: 18px; }
+
+    /* Для кого */
+    .for-whom-section { transform: none; padding: 40px 32px 60px; }
+    .container-inner3 { width: 100%; transform: none; }
+    .for-whom-header { transform: none; }
+    .for-whom-grid {
+        flex-direction: column;
+        padding: 0;
+        gap: 20px;
+    }
+    .for-whom-card { width: 100%; height: auto; }
+    .list-purple, .list-yellow, .list-pink { transform: none; }
+    .card-title, .card-title1, .card-title2 { transform: none; }
+    .list-purple li:last-child { white-space: normal; }
+
+    /* FAQ */
+    .faq-photo-section { transform: none; padding: 40px 32px; }
+    .section-header { transform: none; padding-left: 0; }
+    .faq-frame {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16/9;
+        margin-left: 0;
+        transform: none;
+    }
+
+    /* Галерея / контакты */
+    .simple-section { transform: none; }
+    .section-header1, .section-header2 { transform: none; padding-left: 0; }
+}
+
+/* ========================================
+   МОБИЛЬНЫЙ (до 600px)
+   ======================================== */
+@media (max-width: 600px) {
+    .header { padding: 14px 20px 14px; }
+
+    .logo-box { width: 200px; height: 48px; }
+    .logo-text { font-size: 22px; }
+    .logo-sep { height: 42px; }
+    .hanger-img { width: 32px; }
+
+    .main-wrapper { padding: 32px 20px 0; }
+    .title { font-size: 26px; }
+    .description { font-size: 15px; }
+    .btn { font-size: 17px; height: 52px; }
+
+    .visual-wrapper { flex-direction: column; align-items: center; gap: 0; }
+    .shape-beige {
+        width: 260px;
+        height: 400px;
+        border-radius: 0 0 130px 130px;
+    }
+    .img-main { width: 160px; height: 360px; }
+    .shape-pink {
+        display: none;
+    }
+    .price-tag-beige { transform: translate(80px, -130px); font-size: 14px; padding: 5px 12px; }
+
+    .white-block { padding: 40px 20px; }
+    .features-grid { grid-template-columns: 1fr; }
+    .card-otk { border-radius: 20px; }
+    .card-assort { border-radius: 20px; }
+    .card-delivery { border-radius: 20px; }
+    .card-trend { border-radius: 20px; }
+    .card-otk p { transform: none; }
+    .card-assort p { transform: none; padding-left: 50px; }
+
+    .catalog-section { padding: 40px 20px; }
+    .products-grid { grid-template-columns: 1fr 1fr; gap: 16px; row-gap: 24px; }
+    .product-image, .product-image2 { height: 220px; }
+    .product-name, .product-name2 { font-size: 16px; margin-left: 0; }
+    .price { font-size: 14px; }
+    .btn-buy { font-size: 11px; padding: 6px 10px; transform: none; }
+
+    .cta-section { padding: 40px 20px; }
+    .cta-title { font-size: 22px; }
+
+    .about-section { padding: 40px 20px 40px; }
+    .about-text p { font-size: 16px; }
+
+    .for-whom-section { padding: 40px 20px 40px; }
+    .list-purple li, .list-yellow li, .list-pink li { font-size: 16px; }
+
+    .faq-photo-section { padding: 40px 20px; }
+
+    .stat-value { font-size: 42px; transform: none; }
+    .stat-label { transform: none; }
+    .stat-subtitle { transform: none; }
+    .stat-icon-circle { transform: none; }
+}
+
+/* ========================================
+   ИСПРАВЛЕНИЕ 1100px – 1170px
+   Заголовки, сетка и блок статистики
+   ======================================== */
+@media (min-width: 1100px) and (max-width: 1170px) {
+    
+    /* 1. ЗАГОЛОВКИ: убираем обрезку слева */
+    .features-header, 
+    .catalog-header, 
+    .about-header,
+    .for-whom-header,
+    .section-header,
+    .section-header1,
+    .section-header2 {
+        padding-left: 40px !important; /* Безопасный отступ вместо 140px */
+        padding-right: 40px !important;
+        transform: none !important;    /* Убираем сдвиги */
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+
+    /* 2. КОНТЕЙНЕРЫ: возвращаем отступы */
+    .container-inner,
+    .container-inner1,
+    .container-inner3 {
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+        width: 100% !important;
+        transform: none !important;
+    }
+
+    /* 3. СЕКЦИЯ "ПОЧЕМУ СТОИТ ПОКУПАТЬ" */
+    .features-grid {
+        grid-template-columns: 1fr 1fr !important; /* 2 колонки */
+        gap: 20px !important;
+        padding: 0 !important;
+        width: 100% !important;
+    }
+    .feature-card {
+        position: static !important; /* Убираем наложения */
+        width: 100% !important;
+        height: auto !important;
+        min-height: 140px !important;
+        padding: 20px !important;
+        border-radius: 15px !important; /* Прямоугольные скругления */
+    }
+    .feature-card p {
+        transform: none !important;
+        padding: 0 !important;
+        text-align: center !important;
+        font-size: 14px !important;
+    }
+    .card-icon {
+        position: static !important;
+        transform: none !important;
+        margin: 0 auto 12px auto !important;
+        display: block !important;
+    }
+
+    /* 4. БЛОК СТАТИСТИКИ "КЛИЕНТЫ ЗАРАБАТЫВАЮТ" */
+    .catalog-stats {
+        width: 100% !important;
+        max-width: 280px !important; /* Компактная ширина */
+        margin: 0 auto !important;   /* Центрируем */
+    }
+    .stat-item {
+        width: 100% !important;
+        height: auto !important;
+        padding: 20px !important;
+        border-radius: 16px !important; /* Прямоугольная форма как на фото 5 */
+        text-align: center !important;
+        box-sizing: border-box;
+    }
+    .stat-header {
+        justify-content: center !important;
+        margin-bottom: 8px !important;
+    }
+    .stat-icon-circle {
+        transform: none !important;
+        margin: 0 auto 8px auto !important;
+        display: block !important;
+    }
+    .stat-label {
+        transform: none !important;
+        font-size: 14px !important;
+        display: block !important;
+        margin-bottom: 4px !important;
+    }
+    .stat-value {
+        transform: none !important;
+        font-size: 36px !important;
+        display: block !important;
+        margin: 8px 0 !important;
+    }
+    .stat-subtitle {
+        transform: none !important;
+        font-size: 13px !important;
+        display: block !important;
+    }
+
+    /* 5. КАТАЛОГ: выравниваем сетку */
+    .catalog-wrapper {
+        width: 100% !important;
+        flex-direction: column !important;
+        gap: 30px !important;
+    }
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px !important;
+        width: 100% !important;
+    }
+    .product-card, 
+    .product-card1, 
+    .product-card2, 
+    .product-card3, 
+    .product-card4, 
+    .product-card5 {
+        width: 100% !important;
+        margin: 0 !important;
+        transform: none !important;
+    }
+    .product-image, 
+    .product-image2 {
+        width: 100% !important;
+        height: 200px !important;
+        margin: 0 !important;
+    }
+}
+/* ========================================
+   ИДЕАЛЬНАЯ СЕТКА ДЛЯ 1100px - 1170px (3 КОЛОНКИ)
+   ======================================== */
+@media (min-width: 1100px) and (max-width: 1170px) {
+    
+    /* 1. Сетка: 3 колонки вместо 2 */
+    .features-grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important; /* 3 равные колонки */
+        gap: 20px !important;
+        width: 100% !important;
+        padding: 0 !important;
+    }
+
+    /* 2. Карточки: сброс всех странностей */
+    .feature-card {
+        position: static !important; /* Убираем наложения */
+        width: 100% !important;
+        height: auto !important;
+        min-height: 160px !important;
+        padding: 25px 20px !important;
+        border-radius: 16px !important; /* Ровные скругления */
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important; /* Центрируем иконку и текст */
+        text-align: center !important;
+        background: #F0F4F1 !important; /* Легкий фон (или оставь свой) */
+    }
+
+    /* 3. Иконки: строго по центру сверху */
+    .card-icon {
+        position: static !important;
+        transform: none !important;
+        margin: 0 auto 15px auto !important;
+        display: block !important;
+        width: 50px !important;
+        height: 50px !important;
+    }
+
+    /* 4. Текст: без сдвигов */
+    .feature-card p {
+        transform: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        font-size: 14px !important;
+        line-height: 1.4 !important;
+    }
+
+    /* 5. Сброс специальной центральной карточки */
+    .card-center {
+        grid-column: auto !important;
+        grid-row: auto !important;
+        height: auto !important;
+    }
+
+    /* 6. Специфичные карточки (ОТК, Доставка и т.д.) - делаем их ровными */
+    .card-otk, .card-delivery, .card-assort, .card-trend {
+        border-radius: 16px !important;
+        border: none !important; /* Убираем лишние рамки, если есть */
+    }
+}
+/* ========================================
+   ПРЯМОУГОЛЬНАЯ СЕТКА: 600px – 1100px
+   ======================================== */
+@media (min-width: 600px) and (max-width: 1099px) {
+    
+    /* 1. СЕТКА "ПОЧЕМУ МЫ": 2 колонки, прямоугольные блоки */
+    .features-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* 2 колонки */
+        gap: 20px !important;
+        width: 100% !important;
+        padding: 0 !important;
+        box-sizing: border-box;
+    }
+
+    /* 2. КАРТОЧКИ: сброс хаоса, ровная форма */
+    .feature-card {
+        position: static !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 150px !important;
+        padding: 20px 16px !important;
+        border-radius: 16px !important; /* Прямоугольные скругления */
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 3. ИКОНКИ: строго по центру сверху */
+    .card-icon {
+        position: static !important;
+        transform: none !important;
+        margin: 0 auto 12px auto !important;
+        display: block !important;
+        width: 46px !important;
+        height: 46px !important;
+    }
+
+    /* 4. ТЕКСТ: без сдвигов и переносов */
+    .feature-card p {
+        transform: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        font-size: 14px !important;
+        line-height: 1.4 !important;
+        white-space: normal !important;
+    }
+
+    /* 5. СБРОС СПЕЦИФИЧНЫХ КАРТОЧЕК */
+    .card-center, .card-otk, .card-delivery, .card-assort, .card-trend {
+        grid-column: auto !important;
+        grid-row: auto !important;
+        height: auto !important;
+        border-radius: 16px !important;
+        border: none !important;
+    }
+
+    /* 6. БЛОК СТАТИСТИКИ: прямоугольный, компактный */
+    .catalog-stats {
+        width: 100% !important;
+        max-width: 320px !important;
+        margin: 0 auto !important;
+    }
+    .stat-item {
+        width: 100% !important;
+        height: auto !important;
+        padding: 20px !important;
+        border-radius: 16px !important;
+        text-align: center !important;
+        box-sizing: border-box;
+    }
+    .stat-header, .stat-icon-circle, .stat-label, .stat-value, .stat-subtitle {
+        transform: none !important;
+        margin: 0 auto !important;
+        display: block !important;
+        text-align: center !important;
+    }
+    .stat-header { justify-content: center !important; margin-bottom: 8px !important; }
+    .stat-value { font-size: 38px !important; margin: 8px 0 !important; }
+
+    /* 7. ЗАГОЛОВКИ СЕКЦИЙ: безопасные отступы */
+    .features-header, .catalog-header, .about-header, .for-whom-header,
+    .section-header, .section-header1, .section-header2 {
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+        transform: none !important;
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+}
+/* ========================================
+   ЧЁРНАЯ РАМКА СТРОГО ДЛЯ 600px – 1100px
+   ======================================== */
+@media (min-width: 600px) and (max-width: 1100px) {
+    .card-otk {
+        border: 2px solid #000000 !important;
+        background-color: #FFFFFF !important;
+        border-radius: 16px !important;
+        
+        /* Сброс старых стилей, которые "сносили" блок */
+        position: static !important;
+        transform: none !important;
+        box-sizing: border-box !important;
+        overflow: visible !important;
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+/* ========================================
+   КНОПКА "СМОТРЕТЬ ЕЩЕ" (1100px - 1170px)
+   Исправление перекрытия
+   ======================================== */
+@media (min-width: 1100px) and (max-width: 1170px) {
+    
+    /* Поднимаем кнопку наверх */
+    .catalog-more {
+        position: relative !important;
+        z-index: 100 !important; /* Высокий приоритет отображения */
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 12px !important;
+        margin: 40px 0 0 0 !important;
+        padding: 20px 0 !important;
+        width: 100% !important;
+        
+        /* Сброс всех трансформаций */
+        transform: none !important;
+    }
+
+    /* Убеждаемся, что иконка и текст видны */
+    .more-icon, .more-text {
+        position: relative !important;
+        z-index: 101 !important;
+        display: inline-block !important;
+    }
+
+    .more-icon {
+        font-size: 40px !important;
+        color: #000 !important;
+    }
+
+    .more-text {
+        font-size: 20px !important;
+        color: #000 !important;
+        text-decoration: underline !important;
+    }
+
+    /* Проверяем родителей на overflow: hidden */
+    .catalog-section,
+    .catalog-wrapper,
+    .container-inner1,
+    .white-block {
+        overflow: visible !important;
+        z-index: auto !important;
+    }
+}
+
+/* ========================================
+   ДЛЯ ВСЕХ ОСТАЛЬНЫХ РАЗРЕШЕНИЙ (защита)
+   ======================================== */
+@media (max-width: 1099px), (min-width: 1171px) {
+    .catalog-more {
+        position: relative !important;
+        z-index: 50 !important;
+    }
+}
+/* ========================================
+   КНОПКА "СМОТРЕТЬ ЕЩЕ" (1100px - 1170px)
+   Центрируем, поднимаем и увеличиваем
+   ======================================== */
+@media (min-width: 1100px) and (max-width: 1170px) {
+    
+    .catalog-more {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: center !important; /* Строго по центру */
+        gap: 15px !important; /* Отступ между плюсом и текстом */
+        
+        width: 100% !important;
+        margin-top: 20px !important; /* Поднимаем выше (было больше) */
+        margin-bottom: 40px !important; /* Отступ до формы ниже */
+        
+        position: relative !important;
+        z-index: 100 !important; /* Чтобы не перекрывалось формой */
+        transform: none !important; /* Убираем старые сдвиги */
+    }
+
+    /* Делаем плюс большим */
+    .more-icon {
+        display: inline-block !important;
+        font-size: 48px !important; /* Увеличили размер */
+        font-weight: 300 !important;
+        line-height: 1 !important;
+        color: #000000 !important;
+        margin: 0 !important;
+        transform: none !important;
+    }
+
+    /* Делаем текст больше */
+    .more-text {
+        display: inline-block !important;
+        font-size: 24px !important; /* Увеличили шрифт */
+        font-weight: 500 !important;
+        color: #000000 !important;
+        text-decoration: underline !important;
+        margin: 0 !important;
+        transform: none !important;
+    }
+}
+/* ========================================
+   СЕКЦИЯ "О НАС" (1100px - 1165px)
+   Исправление вылета фото и текста
+   ======================================== */
+@media (min-width: 1100px) and (max-width: 1165px) {
+    
+    /* Контейнер секции "О нас" */
+    .about-section {
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+        overflow: visible !important;
+    }
+
+    /* Обертка с фото и текстом */
+    .about-wrapper {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 30px !important;
+        padding: 0 !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Блок с фотографией */
+    .about-image {
+        width: 45% !important;
+        min-width: 250px !important;
+        height: auto !important;
+        min-height: 350px !important;
+        transform: none !important; /* Убираем сдвиги */
+        margin: 0 !important;
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+    }
+
+    /* Сама фотография */
+    .about-image img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        transform: none !important; /* Убираем сдвиги картинки */
+        margin: 0 !important;
+    }
+
+    /* Текстовый блок */
+    .about-text {
+        width: 55% !important;
+        transform: none !important; /* Убираем сдвиги */
+        margin: 0 !important;
+        padding: 20px 0 0 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Текст внутри блока */
+    .about-text p {
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        white-space: normal !important; /* Разрешаем перенос */
+        word-wrap: break-word !important;
+    }
+
+    /* Заголовок секции */
+    .about-header {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        transform: none !important;
+        margin-bottom: 30px !important;
+    }
+}
+/* ========================================
+   СЕКЦИЯ "О НАС" (900px - 1100px)
+   Фото слева, текст справа (уменьшенные размеры)
+   ======================================== */
+@media (min-width: 900px) and (max-width: 1100px) {
+    
+    .about-section {
+        padding: 40px 40px !important;
+    }
+
+    .about-wrapper {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 30px !important;
+        width: 100% !important;
+    }
+
+    /* Фото слева */
+    .about-image {
+        width: 45% !important;
+        min-width: 280px !important;
+        height: 350px !important;
+        border-radius: 16px !important;
+        overflow: hidden !important;
+        transform: none !important;
+        margin: 0 !important;
+        flex-shrink: 0 !important;
+    }
+
+    .about-image img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        transform: none !important;
+    }
+
+    /* Текст справа */
+    .about-text {
+        width: 55% !important;
+        transform: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .about-text p {
+        font-size: 15px !important;
+        line-height: 1.5 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .about-header {
+        transform: none !important;
+        padding-left: 0 !important;
+        margin-bottom: 30px !important;
+    }
+}
+
+/* ========================================
+   СЕКЦИЯ "О НАС" (600px - 899px)
+   Фото сверху по центру, текст снизу (как на фото 3)
+   ======================================== */
+@media (min-width: 600px) and (max-width: 899px) {
+    
+    .about-section {
+        padding: 40px 30px !important;
+    }
+
+    .about-wrapper {
+        display: flex !important;
+        flex-direction: column !important; /* Вертикальное расположение */
+        align-items: center !important;
+        gap: 25px !important;
+        width: 100% !important;
+    }
+
+    /* Фото по центру сверху */
+    .about-image {
+        width: 100% !important;
+        max-width: 400px !important; /* Ограничиваем ширину */
+        height: 300px !important;
+        border-radius: 16px !important;
+        overflow: hidden !important;
+        transform: none !important;
+        margin: 0 auto !important; /* Центрируем */
+    }
+
+    .about-image img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        transform: none !important;
+    }
+
+    /* Текст снизу по центру */
+    .about-text {
+        width: 100% !important;
+        max-width: 500px !important;
+        transform: none !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+        text-align: center !important; /* Центрируем текст */
+    }
+
+    .about-text p {
+        font-size: 14px !important;
+        line-height: 1.5 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .about-header {
+        transform: none !important;
+        padding-left: 0 !important;
+        margin-bottom: 25px !important;
+        justify-content: center !important; /* Центрируем заголовок */
+    }
+}
+/* ========================================
+   СЕКЦИЯ "О НАС" (320px - 900px)
+   Выравнивание по левому краю
+   ======================================== */
+@media (min-width: 320px) and (max-width: 900px) {
+    
+    /* Заголовок "О нас" */
+    .about-header {
+        justify-content: flex-start !important; /* Прижимаем влево */
+        padding-left: 7% !important;            /* Убираем лишние отступы */
+        text-align: left !important;
+        margin-bottom: 25px !important;
+    }
+
+    /* Общий контейнер */
+    .about-wrapper {
+        align-items: flex-start !important;    /* Выравнивание содержимого по левому краю */
+        text-align: left !important;           /* Текст влево */
+        padding-left: 0 !important;            /* Убираем центрирующий паддинг */
+    }
+
+    /* Блок с картинкой */
+    .about-image {
+        margin: 0 !important;                  /* Убираем auto-маржины (центровку) */
+        margin-bottom: 20px !important;        /* Отступ снизу до текста */
+        width: 100% !important;                /* На всю ширину */
+    }
+
+    /* Блок с текстом */
+    .about-text {
+        text-align: left !important;           /* Текст строго влево */
+        margin: 0 !important;                  /* Убираем центрирующие отступы */
+        padding: 0 !important;
+        width: 100% !important;
+    }
+}
+/* ========================================
+   СКРЫВАЕМ КРАСНЫЕ ПИЛЮЛИ (320px - 1440px)
+   ======================================== */
+@media (min-width: 320px) and (max-width: 1170px) {
+    .pill-icon,
+    .pill-icon1,
+    .pill-icon2,
+    .pill-icon4,
+    .pill-icon5 {
+        display: none !important;
+    }
+}
+/* ========================================
+   СЕТКА "ПОЧЕМУ МЫ" (1100px - 1170px)
+   Выстраиваем карточки как на Фото 1
+   ======================================== */
+@media (min-width: 1100px) and (max-width: 1170px) {
+    
+    /* 1. Включаем сетку из 3 колонок */
+    .features-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr 1fr !important; /* 3 равные колонки */
+        gap: 15px !important; /* Расстояние между карточками */
+        width: 100% !important;
+        padding: 0 !important;
+    }
+
+    /* 2. Первая колонка: ОТК, Доставка, Тренд */
+    .card-otk {
+        grid-column: 1 !important;
+        grid-row: auto !important;
+        border: 2px solid #000 !important; /* Черная рамка как на фото */
+        border-radius: 12px !important;
+    }
+    
+    .card-delivery {
+        grid-column: 1 !important;
+        grid-row: auto !important;
+        border-radius: 12px !important;
+    }
+
+    .card-trend {
+        grid-column: 1 !important;
+        grid-row: auto !important;
+        border-radius: 12px !important;
+    }
+
+    /* 3. Вторая колонка: Высокая карточка с % */
+    .card-center {
+        grid-column: 2 !important;
+        grid-row: span 2 !important; /* Растягиваем на 2 ряда вниз */
+        height: auto !important;
+        min-height: 300px !important; /* Делаем её визуально выше */
+        border-radius: 12px !important;
+    }
+
+    /* 4. Третья колонка: Ассортимент */
+    .card-assort {
+        grid-column: 3 !important;
+        grid-row: auto !important;
+        border-radius: 12px !important;
+    }
+
+    /* 5. Общий стиль для всех карточек, чтобы не наезжали */
+    .feature-card {
+        position: static !important; /* Убираем наложения */
+        width: 100% !important;
+        height: auto !important;
+        min-height: 120px !important;
+        padding: 20px 15px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        transform: none !important; /* Сброс сдвигов */
+        background: #F0F4F1 !important; /* Светлый фон для всех */
+    }
+
+    /* 6. Иконки и текст */
+    .card-icon {
+        position: static !important;
+        transform: none !important;
+        margin: 0 auto 10px auto !important;
+        display: block !important;
+        width: 40px !important;
+        height: 40px !important;
+    }
+    .feature-card p {
+        transform: none !important;
+        padding: 0 !important;
+        font-size: 13px !important;
+        line-height: 1.4 !important;
+    }
+}
+/* ========================================
+   ИСПРАВЛЕНИЕ СЕТКИ "ПОЧЕМУ МЫ" (1100px - 1170px)
+   Полностью убираем наложения карточек
+   ======================================== */
+@media (min-width: 1100px) and (max-width: 1170px) {
+    
+    /* Сброс всех проблемных стилей у сетки */
+    .features-grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important; /* 3 равные колонки */
+        grid-template-rows: auto auto !important; /* 2 ряда */
+        gap: 20px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        position: relative !important;
+        overflow: visible !important;
+    }
+
+    /* Полный сброс у ВСЕХ карточек */
+    .feature-card,
+    .card-otk,
+    .card-center,
+    .card-assort,
+    .card-delivery,
+    .card-trend {
+        position: static !important; /* Убираем absolute/relative */
+        width: 100% !important;
+        height: auto !important;
+        min-height: 180px !important; /* Фиксированная высота для квадратов */
+        padding: 25px 20px !important;
+        margin: 0 !important;
+        border-radius: 16px !important;
+        background: #F0F4F1 !important;
+        
+        /* Сброс всех трансформаций */
+        transform: none !important;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+        z-index: auto !important;
+        
+        /* Flexbox для центрирования контента */
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Расставляем карточки по сетке ЯВНО */
+    /* Ряд 1, Колонка 1: ОТК */
+    .card-otk {
+        grid-column: 1 / 2 !important;
+        grid-row: 1 / 2 !important;
+        border: 2px solid #000000 !important;
+        background: #FFFFFF !important;
+    }
+
+    /* Ряд 1, Колонка 2: Оптовая цена (%) */
+    .card-center {
+        grid-column: 2 / 3 !important;
+        grid-row: 1 / 2 !important;
+    }
+
+    /* Ряд 1, Колонка 3: Ассортимент */
+    .card-assort {
+        grid-column: 3 / 4 !important;
+        grid-row: 1 / 2 !important;
+    }
+
+    /* Ряд 2, Колонка 1: Доставка */
+    .card-delivery {
+        grid-column: 1 / 2 !important;
+        grid-row: 2 / 3 !important;
+    }
+
+    /* Ряд 2, Колонка 2-3: Все модели (растянута на 2 колонки) */
+    .card-trend {
+        grid-column: 2 / 4 !important;
+        grid-row: 2 / 3 !important;
+    }
+
+    /* Иконки */
+    .card-icon {
+        position: static !important;
+        width: 50px !important;
+        height: 50px !important;
+        margin: 0 auto 15px auto !important;
+        display: block !important;
+        transform: none !important;
+        flex-shrink: 0 !important;
+    }
+
+    /* Текст */
+    .feature-card p {
+        font-size: 14px !important;
+        line-height: 1.4 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        transform: none !important;
+        word-wrap: break-word !important;
+    }
+
+    /* Заголовок секции */
+    .features-header {
+        width: 100% !important;
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+        margin-bottom: 30px !important;
+        transform: none !important;
+    }
+}
+/*////////////////////////////////////
+/* ========================================
+ АДАПТИВ 352px - 600px
+Иконка СЛЕВА, Текст СПРАВА по центру
+======================================== */
+@media (min-width: 352px) and (max-width: 600px) {
+    
+    /* 1. Сетка в одну колонку */
+    .features-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+        padding: 0 !important;
+    }
+
+    /* 2. ВСЕ карточки: Flex-контейнер */
+    .feature-card,
+    .card-otk, 
+    .card-center, 
+    .card-assort, 
+    .card-delivery, 
+    .card-trend {
+        display: flex !important;
+        flex-direction: row !important; /* Строка: Иконка | Текст */
+        align-items: center !important; /* Вертикальное центрирование */
+        justify-content: flex-start !important;
+        
+        /* Отступы внутри карточки */
+        padding: 15px 15px 15px 15px !important;
+        
+        box-sizing: border-box !important;
+        width: 100% !important;
+        min-height: 90px !important;
+        border-radius: 20px !important; /* Закругление как у остальных */
+        position: relative !important;
+        overflow: hidden !important;
+    }
+
+    /* 3. Иконка: СТРОГО СЛЕВА */
+    .card-icon,
+    .feature-card .card-icon,
+    .card-otk .card-icon,
+    .card-center .card-icon,
+    .card-assort .card-icon,
+    .card-delivery .card-icon,
+    .card-trend .card-icon {
+        position: static !important; /* Убираем absolute позиционирование */
+        order: 1 !important;         /* Всегда первая (слева) */
+        flex-shrink: 0 !important;   /* Не сжимается */
+        
+        width: 36px !important;
+        height: 36px !important;
+        margin: 0 !important;
+        margin-right: 20px !important; /* Зазор между иконкой и текстом */
+        transform: none !important;    /* Сброс старых сдвигов */
+    }
+
+    /* 4. Текст: СПРАВА, выровнен по центру своего блока */
+    .feature-card p,
+    .card-otk p,
+    .card-center p,
+    .card-assort p,
+    .card-delivery p,
+    .card-trend p {
+        order: 2 !important;         /* Всегда второй (справа) */
+        flex: 1 !important;          /* Занимает всё оставшееся место */
+        
+        text-align: center !important; /* 🔑 Центрирование текста */
+        font-size: 12px !important;
+        line-height: 1.35 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        transform: none !important;  /* Сброс сдвигов */
+        text-indent: 0 !important;
+        word-break: break-word !important;
+        white-space: normal !important;
+    }
+
+    /* 5. Карточка ОТК (черная рамка + закругление) */
+    .card-otk {
+        border: 2px solid #000 !important;
+        background: #fff !important;
+        border-radius: 20px !important;
+    }
+}
+
+
+
+/* ========================================
+🔥 ФИНАЛЬНЫЙ ФИКС (320px - 352px)
+Иконка слева, Текст по центру справа
+======================================== */
+@media (min-width: 320px) and (max-width: 352px) {
+    
+    /* 1. Сетка в одну колонку */
+    .features-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+        padding: 0 !important;
+    }
+
+    /* 2. Карточки: Flex-контейнер (Горизонтальный ряд) */
+    .feature-card,
+    .card-otk, 
+    .card-center, 
+    .card-assort, 
+    .card-delivery, 
+    .card-trend {
+        display: flex !important;
+        flex-direction: row !important; /* Ряд: Иконка | Текст */
+        align-items: center !important; /* Центрируем по вертикали */
+        justify-content: flex-start !important;
+        
+        /* ОТСТУПЫ ВНУТРИ КАРТОЧКИ */
+        padding: 15px 15px 15px 15px !important; 
+        
+        box-sizing: border-box !important;
+        width: 100% !important;
+        min-height: 85px !important;
+        position: relative !important;
+        overflow: hidden !important;
+    }
+
+    /* 3. Иконка: СЛЕВА, фиксированная */
+    .card-icon,
+    .feature-card .card-icon,
+    .card-otk .card-icon,
+    .card-center .card-icon,
+    .card-assort .card-icon,
+    .card-delivery .card-icon,
+    .card-trend .card-icon {
+        position: static !important; /* Убираем абсолютное позиционирование */
+        order: 1 !important; /* Всегда первая (Слева) */
+        flex-shrink: 0 !important; /* Не сжимается */
+        
+        width: 32px !important;
+        height: 32px !important;
+        margin: 0 !important;
+        margin-right: 15px !important; /* Отступ от иконки до текста */
+        transform: none !important; /* Сброс сдвигов */
+    }
+
+    /* 4. Текст: СПРАВА от иконки, выровнен по центру */
+    .feature-card p,
+    .card-otk p,
+    .card-center p,
+    .card-assort p,
+    .card-delivery p,
+    .card-trend p {
+        order: 2 !important; /* Всегда второй (Справа) */
+        flex: 1 !important; /* Занимает оставшееся место */
+        
+        text-align: center !important; /* 🔑 Выравнивание текста по центру */
+        font-size: 11px !important;
+        line-height: 1.35 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        transform: none !important; /* Сброс сдвигов текста */
+        word-break: break-word !important;
+        white-space: normal !important;
+    }
+
+    /* 5. Карточка ОТК (черная рамка) */
+    .card-otk {
+        border: 2px solid #000 !important;
+        background: #fff !important;
+        border-radius: 15px !important; /* Скругляем углы как у остальных */
+    }
+}
+/****************************************
+/* ========================================
+   🔥 ФИКС: ПОКАЗЫВАЕМ ГОЛОВУ НА МОБИЛЬНЫХ (320px - 600px)
+   ======================================== */
+@media (min-width: 320px) and (max-width: 600px) {
+    /* Увеличиваем высоту контейнера для бежевой фигуры */
+    .shape-beige {
+        height: 450px !important; /* Было 400px, увеличили */
+        border-radius: 0 0 150px 150px !important;
+    }
+    
+    /* Корректируем позицию изображения */
+    .img-main {
+        height: 400px !important; /* Было 360px */
+        transform: translate(-1px, 10px) !important; /* Подняли выше (было 33px) */
+        object-position: top center !important; /* Показываем верх изображения */
+    }
+    
+    /* Если изображение внутри контейнера */
+    .shape-beige img,
+    .img-main img {
+        object-position: top center !important;
+    }
+}
+
+/* Для очень маленьких экранов (320px) */
+@media (max-width: 320px) {
+    .shape-beige {
+        height: 420px !important;
+        border-radius: 0 0 130px 130px !important;
+    }
+    .img-main {
+        height: 380px !important;
+        transform: translate(-1px, 5px) !important;
+        object-position: top center !important;
+    }
+}
+/* ========================================
+   🔥 ФИКС: ОПУСКАЕМ ЖЕНЩИНУ (320px - 600px)
+   Чтобы низ фото плавно уходил в фон
+   ======================================== */
+@media (min-width: 320px) and (max-width: 600px) {
+    /* Опускаем изображение ниже */
+    .img-main {
+        transform: translate(-3px, 140px) !important; /* Было 89px, опускаем до 140px */
+        object-position: top center !important;
+    }
+}
+/* ========================================
+   🔥 ФИКС КРАСНОЙ ТОЧКИ В ЦЕННИКЕ (320px - 600px)
+   ======================================== */
+@media (max-width: 600px) {
+    /* Точка в ценнике на бежевом фоне */
+    .price-tag-beige .dot {
+        width: 10px !important;   /* Уменьшаем размер */
+        height: 10px !important;
+        transform: none !important; /* Убираем все сдвиги, чтобы стояла ровно */
+        margin: 0 8px 0 0 !important; /* Отступ справа от точки до текста */
+        align-self: center !important; /* Центрируем по вертикали */
+        flex-shrink: 0 !important;
+    }
+
+    /* Если есть точка в другом ценнике (розовом), применяем то же самое */
+    .price-tag-pink .dot2 {
+        width: 10px !important;
+        height: 10px !important;
+        transform: none !important;
+        margin: 0 8px 0 0 !important;
+    }
+    
+    /* Корректируем сам текст в ценнике, чтобы он встал ровно */
+    .price-tag-beige .price-text1 {
+        transform: none !important;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        line-height: 1.2;
+    }
+}
+/***********************
+/* ========================================
+   🔥 ИСПРАВЛЕНИЕ ЦЕННИКА НА РОЗОВОМ БЛОКЕ (600px - 1100px)
+   Ценник ВНУТРИ розовой фигуры, компактный, ровный
+   ======================================== */
+@media (min-width: 600px) and (max-width: 1100px) {
+    
+    /* Розовый блок: разрешаем отображение ценника внутри */
+    .shape-pink {
+         overflow: visible !important; /* 🔥 Обрезаем на планшете тоже */
+        position: relative !important;
+        
+    }
+
+    /* Сам ценник */
+    .price-tag-pink {
+        transform: translate(30px, -130px) !important; /* 🔥 Сдвинули левее (было 20px) */
+        padding: 6px 12px !important;                  /* Компактные отступы */
+        border-radius: 20 0 0 0 !important;
+        font-size: 14px !important;                    /* Уменьшаем шрифт */
+        gap: 6px !important;                           /* Зазор между точкой и текстом */
+        width: auto !important;
+        white-space: nowrap !important;                /* Текст не переносится */
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important; /* Легкая тень для объема */
+
+    }
+
+    /* Текст внутри ценника */
+    .price-tag-pink .price-text2 {
+        transform: none !important;
+        font-size: 14px !important;
+        line-height: 1.1 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Красная точка внутри ценника */
+    .price-tag-pink .dot2 {
+        width: 8px !important;                         /* Маленькая аккуратная точка */
+        height: 8px !important;
+        transform: none !important;
+        margin: 0 !important;
+    }
+}
+
+/************************
+/* ========================================
+   🔥 ВЫРАВНИВАНИЕ ЗАГОЛОВКОВ ПО ЦЕНТРУ (320px - 1100px)
+   ======================================== */
+@media (min-width: 320px) and (max-width: 1100px) {
+    
+    /* 1. Основные классы заголовков */
+    .features-header,
+    .catalog-header,
+    .about-header,
+    .for-whom-header,
+    .section-header,
+    .section-header1,
+    .section-header2 {
+        /* Центрирование через Flexbox */
+        justify-content: center !important; 
+        align-items: center !important;
+        
+        /* Убираем старые сдвиги и ограничивающие отступы */
+        transform: none !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 20px !important;  /* Безопасный отступ от края экрана */
+        padding-right: 20px !important;
+        
+        /* Занимаем всю ширину, чтобы можно было центрировать */
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box;
+        text-align: center !important;
+    }
+
+    /* 2. Сами тексты заголовков (на случай если флекс не сработал на инлайн) */
+    .features-header .section-title,
+    .catalog-header .catalog-title,
+    .about-header .about-title,
+    .for-whom-header .for-whom-title,
+    .section-header .section-title,
+    .section-header1 .section-title,
+    .section-header2 .section-title {
+        text-align: center !important;
+        width: 100% !important;
+    }
+    
+    /* 3. Скрываем "пилюли" (красные черточки), если они мешают центровке,
+       или центрируем их вместе с текстом */
+    .pill-icon, .pill-icon1, .pill-icon2, .pill-icon4, .pill-icon5 {
+        display: none !important; /* Часто проще скрыть их на мобильных для чистоты */
+    }
+}
+/*/**/
+/* ========================================
+   УМЕНЬШЕНИЕ FAQ НА 1100px - 1330px
+   ======================================== */
+@media (min-width: 1100px) and (max-width: 1330px) {
+    .faq-frame {
+        width: 90% !important;           /* Уменьшаем ширину */
+        height: auto !important;         /* Автоматическая высота */
+        aspect-ratio: 16/9 !important;   /* Сохраняем пропорции */
+        margin-left: 5% !important;      /* Центрируем */
+        transform: translate(0, -50px) !important; /* Корректируем позицию */
+    }
+    
+    .faq-frame img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain !important;  /* Показываем всё изображение */
+    }
+}
+/* ========================================
+   🔥 ЦЕНТРИРОВАНИЕ ИКОНКИ В КРУГЕ (600px - 1170px)
+   ======================================== */
+@media (min-width: 600px) and (max-width: 1170px) {
+    
+    /* Сам круг: возвращаем Flexbox для центрирования */
+    .stat-icon-circle {
+        display: flex !important;       /* Включаем Flexbox */
+        justify-content: center !important; /* Центр по горизонтали */
+        align-items: center !important;     /* Центр по вертикали */
+        transform: none !important;     /* Убираем старые сдвиги (-12px, -25px) */
+        margin: 0 auto 10px auto !important; /* Центрируем сам круг в карточке */
+        padding: 0 !important;
+        
+        /* Фиксируем размеры круга */
+        width: 50px !important;
+        height: 50px !important;
+        min-width: 50px !important;
+        min-height: 50px !important;
+        border-radius: 50% !important;
+        background-color: #FCE8D5 !important;
+    }
+
+    /* Картинка внутри круга */
+    .stat-icon-image {
+        transform: none !important;     /* Убираем любые сдвиги картинки */
+        margin: 0 !important;
+        width: 33px !important;         /* Размер иконки */
+        height: 33px !important;
+        object-fit: contain !important;
+        display: block !important;
+    }
+}
+/*******
+
+/* ========================================
+🔥 ИСПРАВЛЕНИЕ "ДЛЯ КОГО" (1100px - 1170px)
+Карточки в 2-3 колонки, шире и красивее
+======================================== */
+@media (min-width: 1100px) and (max-width: 1170px) {
+    
+    /* Уменьшаем боковые отступы у секции */
+    .for-whom-section {
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+        transform: none !important;
+    }
+
+    /* Заголовок */
+    .for-whom-header {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        transform: none !important;
+        width: 100% !important;
+        justify-content: flex-start !important;
+    }
+
+    /* Сетка карточек: 2 колонки */
+    .for-whom-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* 2 равные колонки */
+        gap: 25px !important;              /* Расстояние между карточками */
+        padding: 0 !important;
+        transform: none !important;
+        width: 100% !important;
+    }
+
+    /* Карточки */
+    .for-whom-card {
+        width: 100% !important;            /* Занимают всю ширину колонки */
+        height: auto !important;           /* Высота под контент */
+        min-height: 320px !important;      /* Минимальная высота */
+        margin: 0 !important;
+        padding: 30px 25px !important;     /* Внутренние отступы */
+        box-sizing: border-box !important;
+    }
+
+    /* Заголовки карточек */
+    .card-title, .card-title1, .card-title2 {
+        transform: none !important;
+        margin-bottom: 20px !important;
+        font-size: 22px !important;
+    }
+
+    /* Списки */
+    .list-purple, .list-yellow, .list-pink {
+        transform: none !important;
+        margin: 0 !important;
+    }
+
+    .list-purple li, .list-yellow li, .list-pink li {
+        font-size: 16px !important;
+        line-height: 1.4 !important;
+        margin-bottom: 8px !important;
+    }
+}
